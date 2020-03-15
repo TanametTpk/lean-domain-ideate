@@ -1,15 +1,20 @@
-import React from 'react'
-import { Layout, Badge } from 'antd';
-import {ShoppingCartOutlined} from '@ant-design/icons';
+import React, {useState} from 'react'
+import { Layout, Badge, Modal } from 'antd'
+import {ShoppingCartOutlined} from '@ant-design/icons'
+import { connect } from 'react-redux'
+import CartList from '../components/CartList'
 
 const { Header, Content, Footer } = Layout;
 
 const MainLayout = (props) => {
+
+    const [modalVisible, setModealVisible] = useState(false)
+
     return (
         <Layout style={{minHeight:"100vh"}}>
             <Header style={{ position: 'fixed', zIndex: 100, width: '100%', color:"white" }}>
                 <div style={{ cursor: "pointer", display:"inline" }}>
-                    <Badge count={10} style={{ backgroundColor: '#52c41a' }}>
+                    <Badge count={props.carts.count} style={{ backgroundColor: '#52c41a' }} onClick={() => setModealVisible(true)} >
                         <ShoppingCartOutlined style={{fontSize:"24px", cursor: "pointer" }} />
                     </Badge>
                 </div>
@@ -23,8 +28,22 @@ const MainLayout = (props) => {
 
             <Footer style={{ textAlign: 'center' }}>Lean Domain Ideate ©2020 Created by Tanamettpk</Footer>
 
+            <Modal
+                title="Your domain list"
+                visible={modalVisible}
+                onOk={() => setModealVisible(false)}
+                onCancel={() => setModealVisible(false)}
+                footer={null}
+            >
+                <CartList domains={props.carts.items} />
+            </Modal>
+
         </Layout>
     )
 }
 
-export default MainLayout
+const mapStateToProps = (state) => ({
+    carts: state.carts
+})
+
+export default connect(mapStateToProps, null)(MainLayout)
