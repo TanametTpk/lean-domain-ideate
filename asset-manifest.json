@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/lean-domain-ideate/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/lean-domain-ideate/static/js/main.e2528c70.chunk.js",
+    "main.js.map": "/lean-domain-ideate/static/js/main.e2528c70.chunk.js.map",
+    "runtime-main.js": "/lean-domain-ideate/static/js/runtime-main.6755a51b.js",
+    "runtime-main.js.map": "/lean-domain-ideate/static/js/runtime-main.6755a51b.js.map",
+    "static/css/2.1bd2ab2f.chunk.css": "/lean-domain-ideate/static/css/2.1bd2ab2f.chunk.css",
+    "static/js/2.7dad070c.chunk.js": "/lean-domain-ideate/static/js/2.7dad070c.chunk.js",
+    "static/js/2.7dad070c.chunk.js.map": "/lean-domain-ideate/static/js/2.7dad070c.chunk.js.map",
+    "index.html": "/lean-domain-ideate/index.html",
+    "precache-manifest.a3be0faa472072ec081876c4160fec11.js": "/lean-domain-ideate/precache-manifest.a3be0faa472072ec081876c4160fec11.js",
+    "service-worker.js": "/lean-domain-ideate/service-worker.js",
+    "static/css/2.1bd2ab2f.chunk.css.map": "/lean-domain-ideate/static/css/2.1bd2ab2f.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/lean-domain-ideate/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.7dad070c.chunk.js.LICENSE.txt": "/lean-domain-ideate/static/js/2.7dad070c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6755a51b.js",
+    "static/css/2.1bd2ab2f.chunk.css",
+    "static/js/2.7dad070c.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.e2528c70.chunk.js"
+  ]
+}
