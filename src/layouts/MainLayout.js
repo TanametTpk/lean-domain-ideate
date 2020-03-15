@@ -1,23 +1,18 @@
 import React from 'react'
-import { Layout, Menu } from 'antd';
+import { Layout, Badge } from 'antd';
+import {ShoppingCartOutlined} from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
 
 const MainLayout = (props) => {
     return (
         <Layout style={{height:"100vh"}}>
-            <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-                <div className="logo" />
-                <Menu
-                    theme="dark"
-                    mode="horizontal"
-                    defaultSelectedKeys={['2']}
-                    style={{ lineHeight: '64px' }}
-                >
-                    <Menu.Item key="1">nav 1</Menu.Item>
-                    <Menu.Item key="2">nav 2</Menu.Item>
-                    <Menu.Item key="3">nav 3</Menu.Item>
-                </Menu>
+            <Header style={{ position: 'fixed', zIndex: 1, width: '100%', color:"white" }}>
+                <div style={{ cursor: "pointer", display:"inline" }}>
+                    <Badge count={10} style={{ backgroundColor: '#52c41a' }}>
+                        <ShoppingCartOutlined style={{fontSize:"24px", cursor: "pointer" }} />
+                    </Badge>
+                </div>
             </Header>
 
             <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>

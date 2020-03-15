@@ -1,6 +1,7 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout'
-import { Input } from 'antd'
+import DomainList from '../components/DomainList'
+import { Input, PageHeader  } from 'antd'
 import styled from 'styled-components'
 
 const { Search } = Input
@@ -14,6 +15,8 @@ const SearchContainer = styled.div`
 
 const SearchPage = () => {
 
+    const results = ["domain a", "domain b"]
+
     const searchDomain = (value) => {
 
         console.log(value)
@@ -22,6 +25,8 @@ const SearchPage = () => {
 
     return (
         <MainLayout>
+
+
             <SearchContainer>
                 
                 <Search
@@ -33,6 +38,14 @@ const SearchPage = () => {
                 />
 
             </SearchContainer>
+
+            <PageHeader
+                className="page-search-header"
+                title="Results"
+                subTitle=""
+            />
+            <DomainList domains={results} />
+
         </MainLayout>
     )
 }
