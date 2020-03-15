@@ -6,8 +6,8 @@ const { Header, Content, Footer } = Layout;
 
 const MainLayout = (props) => {
     return (
-        <Layout style={{height:"100vh"}}>
-            <Header style={{ position: 'fixed', zIndex: 1, width: '100%', color:"white" }}>
+        <Layout style={{minHeight:"100vh"}}>
+            <Header style={{ position: 'fixed', zIndex: 100, width: '100%', color:"white" }}>
                 <div style={{ cursor: "pointer", display:"inline" }}>
                     <Badge count={10} style={{ backgroundColor: '#52c41a' }}>
                         <ShoppingCartOutlined style={{fontSize:"24px", cursor: "pointer" }} />

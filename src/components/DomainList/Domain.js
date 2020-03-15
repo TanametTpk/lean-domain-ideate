@@ -20,10 +20,42 @@ const Container = styled.div`
 
 `
 
-const Domain = ({name}) => {
+const Domain = ({name, searchedWord}) => {
+
+    const capitalize = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    const capitalizeDomain = (result, domain) => {
+
+        let domain_name = result
+    
+        let splited_domain = domain_name.split(domain.toLowerCase())
+    
+        let word = splited_domain[0]
+        let isfront = true
+        if (splited_domain[1]){
+            word = splited_domain[1]
+            isfront = false
+        }
+        
+        word = capitalize(word)
+        if (isfront) word = <div><b>{word}</b>{capitalize(domain)}</div>
+        else word = <div>{capitalize(domain)}<b>{word}</b></div>
+    
+        return word
+    
+    }
+
+    const goToGoogleDomain = () => {
+
+        window.open(`https://domains.google.com/m/registrar/search?searchTerm=${name}`, "_blank")
+
+    }
+
     return (
-        <Container>
-            {name}
+        <Container onClick={goToGoogleDomain}>
+            {capitalizeDomain(name, searchedWord)}
         </Container>
     )
 }
